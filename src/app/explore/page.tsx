@@ -321,67 +321,6 @@ export default function ExplorePage() {
                     </p>
                   </div>
                 </div>
-
-                <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-200 dark:via-gray-700 to-transparent my-2"></div>
-
-                <div>
-                  <h3 className="text-lg font-medium mb-4 text-gray-900 dark:text-white flex items-center gap-2">
-                    <div className="w-1 h-4 bg-blue-600 dark:bg-blue-400 rounded-full"></div>
-                    Career Paths
-                  </h3>
-                  <div className="space-y-4">
-                    {selectedCareer.career_paths.map((path, index) => (
-                      <div
-                        key={index}
-                        className="p-4 border border-gray-100 dark:border-gray-800 rounded-md bg-white dark:bg-gray-900"
-                      >
-                        <h4 className="font-medium text-lg text-gray-900 dark:text-white">
-                          {path.title}
-                        </h4>
-                        <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
-                          {path.description}
-                        </p>
-                        <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
-                          <span className="font-medium">Timeline:</span>{" "}
-                          {path.timeline}
-                        </p>
-
-                        <div className="mt-4">
-                          <h5 className="font-medium text-sm text-gray-900 dark:text-white mb-2">
-                            Requirements:
-                          </h5>
-                          <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                            {path.requirements.map((req, i) => (
-                              <li key={i} className="flex items-baseline gap-2">
-                                <span className="text-blue-600 dark:text-blue-400">
-                                  •
-                                </span>
-                                <span>{req}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        <div className="mt-4">
-                          <h5 className="font-medium text-sm text-gray-900 dark:text-white mb-2">
-                            Potential Roles:
-                          </h5>
-                          <div className="flex flex-wrap gap-1 mt-1">
-                            {path.potential_roles.map((role) => (
-                              <Badge
-                                key={role}
-                                variant="outline"
-                                className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300"
-                              >
-                                {role}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
 
               <DialogFooter>

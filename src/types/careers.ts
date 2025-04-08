@@ -9,18 +9,9 @@ export interface Career {
   education_required: string;
   experience_level: string;
   industry: string;
-  related_careers: string[];
-  career_paths: CareerPath[];
+
 }
 
-export interface CareerPath {
-  title: string;
-  description: string;
-  timeline: string;
-  requirements: string[];
-  next_steps: string[];
-  potential_roles: string[];
-}
 
 export interface SimulationPath {
   id: string;
