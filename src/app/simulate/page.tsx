@@ -20,22 +20,57 @@ import {
   DialogFooter,
   DialogClose,
 } from "@/components/ui/dialog";
-import { simulationPaths } from "@/config/careers";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
-  Check,
   LineChart,
   TrendingUp,
   Clock,
   DollarSign,
-  Award,
   ArrowRight,
 } from "lucide-react";
+import { simulationPaths } from "@/config/careers";
 import { SimulationPath } from "@/types/careers";
+import { skillCategories } from "@/config/skills"; // Import skillCategories
+
+// Extract unique industries from simulationPaths for the field of interest filter
+const industries = [...new Set(simulationPaths.map((path) => path.industry))];
+
+// Sort simulationPaths by growthRate (descending) and convert growthRate to number for comparison
+const sortedPaths = [...simulationPaths].sort((a, b) => {
+  const growthA = parseFloat(a.growthRate.replace("%", ""));
+  const growthB = parseFloat(b.growthRate.replace("%", ""));
+  return growthB - growthA;
+});
 
 export default function SimulatePage() {
   const [selectedPath, setSelectedPath] = useState<SimulationPath | null>(null);
+  const [filters, setFilters] = useState({
+    skills: [] as string[],
+    fieldOfInterest: [] as string[],
+  });
 
-  const trendingPaths = simulationPaths.filter((path) => path.trending);
+  // Handle checkbox changes for filters
+  const handleFilterChange = (type: string, value: string, checked: boolean) => {
+    setFilters((prev) => {
+      const updated = { ...prev };
+      if (checked) {
+        updated[type as keyof typeof filters].push(value);
+      } else {
+        updated[type as keyof typeof filters] = updated[type as keyof typeof filters].filter((v) => v !== value);
+      }
+      return updated;
+    });
+  };
+
+  // Filter paths based on selected filters
+  const filteredPaths = sortedPaths.filter((path) => {
+    const matchesSkills = filters.skills.length === 0 || 
+      filters.skills.some((skill) => path.requiredSkills.includes(skill));
+    const matchesField = filters.fieldOfInterest.length === 0 || 
+      filters.fieldOfInterest.includes(path.industry);
+
+    return matchesSkills && matchesField;
+  });
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950">
@@ -53,26 +88,107 @@ export default function SimulatePage() {
               </span>
             </h1>
             <p className="text-gray-600 dark:text-gray-300 max-w-lg mx-auto">
-              Thoughtfully explore different career paths and discover how your
-              choices today can shape your professional journey tomorrow.
+              Explore career paths with the highest growth potential tailored to
+              your skills and interests.
             </p>
           </div>
         </div>
       </div>
 
       <div className="container px-4 md:px-6 mx-auto py-12">
-        {/* Trending Careers Section */}
-        <div className="mb-16">
+        {/* Input Section with Checkboxes */}
+        <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-1 h-5 bg-emerald-600 dark:bg-emerald-400 rounded-full"></div>
-            <h2 className="text-2xl font-serif font-medium text-gray-900 dark:text-white flex items-center">
-              Trending Career Paths
-              <TrendingUp className="ml-2 h-5 w-5 text-emerald-600 dark:text-emerald-400" />
+            <h2 className="text-2xl font-serif font-medium text-gray-900 dark:text-white">
+              Filter Your Path
+            </h2>
+          </div>
+          <div className="space-y-6">
+            {/* Skills */}
+            <div>
+              <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4">
+                Skills You Have
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {skillCategories.map((category) => (
+                  <Card
+                    key={category.name}
+                    className="bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <CardHeader className="pb-2">
+                      <h4 className="text-md font-medium text-gray-800 dark:text-gray-200">
+                        {category.name}
+                      </h4>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="grid grid-cols-2 gap-3">
+                        {category.skills.map((skill) => (
+                          <div
+                            key={skill}
+                            className="flex items-center space-x-2 p-2 bg-white dark:bg-gray-900 rounded-md border border-gray-100 dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                          >
+                            <Checkbox
+                              id={`skill-${skill}`}
+                              checked={filters.skills.includes(skill)}
+                              onCheckedChange={(checked) =>
+                                handleFilterChange("skills", skill, checked as boolean)
+                              }
+                            />
+                            <label
+                              htmlFor={`skill-${skill}`}
+                              className="text-sm text-gray-700 dark:text-gray-300"
+                            >
+                              {skill}
+                            </label>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            {/* Field of Interest */}
+            <div>
+              <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
+                Field of Interest
+              </h3>
+              <div className="flex flex-wrap gap-4">
+                {industries.map((industry) => (
+                  <div key={industry} className="flex items-center space-x-2">
+                    <Checkbox
+                      id={`field-${industry}`}
+                      checked={filters.fieldOfInterest.includes(industry)}
+                      onCheckedChange={(checked) =>
+                        handleFilterChange("fieldOfInterest", industry, checked as boolean)
+                      }
+                    />
+                    <label
+                      htmlFor={`field-${industry}`}
+                      className="text-sm text-gray-700 dark:text-gray-300"
+                    >
+                      {industry}
+                    </label>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* All Career Paths (Sorted by Growth Rate) */}
+        <div>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-1 h-5 bg-gray-400 dark:bg-gray-600 rounded-full"></div>
+            <h2 className="text-2xl font-serif font-medium text-gray-900 dark:text-white">
+              Career Pathways (Highest Growth First)
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {trendingPaths.map((path) => (
+            {filteredPaths.map((path) => (
               <Card
                 key={path.id}
                 className="transition-all hover:border-emerald-200 dark:hover:border-emerald-800 cursor-pointer border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-sm"
@@ -104,50 +220,21 @@ export default function SimulatePage() {
               </Card>
             ))}
           </div>
-        </div>
 
-        {/* All Career Paths */}
-        <div>
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-1 h-5 bg-gray-400 dark:bg-gray-600 rounded-full"></div>
-            <h2 className="text-2xl font-serif font-medium text-gray-900 dark:text-white">
-              All Career Pathways
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {simulationPaths.map((path) => (
-              <Card
-                key={path.id}
-                className="transition-all hover:border-blue-200 dark:hover:border-blue-800 cursor-pointer border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-sm"
-                onClick={() => setSelectedPath(path)}
+          {filteredPaths.length === 0 && (
+            <div className="text-center py-16">
+              <p className="text-gray-500 dark:text-gray-400 mb-4">
+                No careers match your filters.
+              </p>
+              <Button
+                variant="outline"
+                onClick={() => setFilters({ skills: [], fieldOfInterest: [] })}
+                className="border border-gray-200 dark:border-gray-800"
               >
-                <CardHeader className="pb-2">
-                  <div className="flex items-center justify-between mb-1">
-                    <Badge className="bg-blue-50 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/60 border-blue-200 dark:border-blue-800">
-                      {path.averageSalary}
-                    </Badge>
-                    <DollarSign className="h-4 w-4 text-blue-600 dark:text-blue-400" />
-                  </div>
-                  <CardTitle className="text-xl font-medium text-gray-900 dark:text-white">
-                    {path.title}
-                  </CardTitle>
-                  <CardDescription className="text-gray-600 dark:text-gray-300 mt-1">
-                    {path.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
-                    <Clock className="mr-2 h-4 w-4" />
-                    <span>{path.timeToAchieve}</span>
-                  </div>
-                </CardContent>
-                <CardFooter className="pt-0 text-sm text-blue-600 dark:text-blue-400 font-medium">
-                  Explore pathway <ArrowRight className="ml-1 h-3 w-3" />
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
+                Clear Filters
+              </Button>
+            </div>
+          )}
         </div>
 
         {/* Career Detail Dialog */}
@@ -260,7 +347,6 @@ export default function SimulatePage() {
                     </Button>
                   </DialogClose>
                   <Button className="bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-600 dark:hover:bg-emerald-700">
-                    <Award className="mr-2 h-4 w-4" />
                     Start Simulation
                   </Button>
                 </DialogFooter>

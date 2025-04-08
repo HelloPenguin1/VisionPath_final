@@ -22,4 +22,5 @@ export interface SimulationPath {
   timeToAchieve: string;
   steps: string[];
   trending: boolean;
+  industry: string;
 }
