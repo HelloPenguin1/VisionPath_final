@@ -12,7 +12,6 @@ export interface Career {
 
 }
 
-
 export interface SimulationPath {
   id: string;
   title: string;
