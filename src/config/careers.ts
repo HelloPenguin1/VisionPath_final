@@ -1186,7 +1186,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Design and build robotic systems for automation and other applications",
     averageSalary: "$110,000/year",
     growthRate: "9%",
-    requiredSkills: ["ROS", "C++", "Mechanical Design", "Automation"],
+    requiredSkills: ["ROS", "C++", "Mechanical Design", "Automation","Branding"],
     timeToAchieve: "4-6 years",
     steps: [
       "Study engineering fundamentals",
@@ -2000,6 +2000,7 @@ export const simulationPaths: SimulationPath[] = [
     trending: false,
     industry: "Healthcare",
   },
+  
 ];
 
 export const industries = [
