@@ -286,20 +286,7 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Partners/Trusted by section */}
-      <section className="w-full py-10 md:py-16 bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-900">
-        <div className="container px-4 md:px-6 mx-auto">
-          <p className="text-sm text-gray-500 dark:text-gray-400 text-center mb-6">Trusted by professionals from leading companies</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-60">
-            {/* Company logo placeholders */}
-            <div className="w-24 h-12 bg-gray-200 dark:bg-gray-800 rounded flex items-center justify-center">Logo</div>
-            <div className="w-24 h-12 bg-gray-200 dark:bg-gray-800 rounded flex items-center justify-center">Logo</div>
-            <div className="w-24 h-12 bg-gray-200 dark:bg-gray-800 rounded flex items-center justify-center">Logo</div>
-            <div className="w-24 h-12 bg-gray-200 dark:bg-gray-800 rounded flex items-center justify-center">Logo</div>
-            <div className="w-24 h-12 bg-gray-200 dark:bg-gray-800 rounded flex items-center justify-center">Logo</div>
-          </div>
-        </div>
-      </section>
+  
 
     </div>
   );
