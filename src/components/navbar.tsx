@@ -16,7 +16,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800 bg-white/95 dark:bg-gray-950/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 dark:supports-[backdrop-filter]:bg-gray-950/80">
-      <div className="container mx-auto px-4 md:px-6 flex h-24 items-center justify-between"> {/* Changed h-20 to h-24 */}
+      <div className="container mx-auto px-4 md:px-6 flex h-30 items-center justify-between"> 
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2 ml-2"> {/* Added ml-4 */}
             <Image
@@ -24,7 +24,7 @@ export function Navbar() {
               alt="VisionPath Logo"
               width={180}
               height={48}  
-              className="object-contain"
+              className="object-contain my-2"
             />
           </Link>
 

@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { supabase } from "@/lib/supabaseClient";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -13,17 +13,22 @@ import {
 } from "@/components/ui/card";
 
 export default function LoginPage() {
-  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
-  function handleGoogleLogin() {
+  const handleGoogleLogin = async () => {
     setIsLoading(true);
-    // Here you would typically implement Google OAuth
-    // For this example, we'll simulate a redirect
-    setTimeout(() => {
-      router.push("/profile");
-    }, 1000);
-  }
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo: 'http://localhost:3000/profile', // update to prod URL when deploying
+      },
+    });
+
+    if (error) {
+      console.error("Google Sign-in error:", error.message);
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div className="container flex h-screen w-screen flex-col items-center justify-center">
@@ -38,8 +43,8 @@ export default function LoginPage() {
         </CardHeader>
         <CardContent className="pt-4">
           <div className="flex flex-col space-y-4">
-            <Button 
-              onClick={handleGoogleLogin} 
+            <Button
+              onClick={handleGoogleLogin}
               className="w-full flex items-center justify-center gap-2"
               disabled={isLoading}
             >

@@ -38,6 +38,11 @@ import {
   TrendingUp,
 } from "lucide-react";
 
+
+
+
+
+
 export default function ExplorePage() {
   const [filteredCareers, setFilteredCareers] = useState<Career[]>(careers);
   const [selectedCareer, setSelectedCareer] = useState<Career | null>(null);
@@ -48,6 +53,9 @@ export default function ExplorePage() {
   });
   const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
 
+
+
+
   useEffect(() => {
     // Simulate loading user profile
     setTimeout(() => {
@@ -55,6 +63,9 @@ export default function ExplorePage() {
     }, 500);
   }, []);
 
+
+
+  //Update the displayed list of careers whenever filters are clicked through
   useEffect(() => {
     const filtered = careers.filter((career) => {
       return (
@@ -64,9 +75,13 @@ export default function ExplorePage() {
         (!filters.education || career.education_required === filters.education)
       );
     });
-    setFilteredCareers(filtered);
+    setFilteredCareers(filtered); //updates with new filtered list
   }, [filters]);
 
+
+
+
+//Not used yet
   const calculateMatchScore = (career: Career) => {
     if (!userProfile) return 0;
 
@@ -83,6 +98,12 @@ export default function ExplorePage() {
 
     return Math.min(score, 100);
   };
+
+
+
+
+
+
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950">
