@@ -150,8 +150,15 @@ export default function SimulatePage() {
               </div>
             </div>
 
+            {/* Add What if? title */}
+            <div className="text-center my-12">
+              <h2 className="text-4xl font-serif font-medium text-gray-900 dark:text-white">
+                What if?
+              </h2>
+            </div>
+
             {/* Field of Interest */}
-            <div>
+            <div className="mt-8">
               <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
                 Field of Interest
               </h3>
