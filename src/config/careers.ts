@@ -956,16 +956,14 @@ export const careers: Career[] = [
   },
 ];
 
-
 export const simulationPaths: SimulationPath[] = [
-  // First 25 careers (with industry added from previous response)
   {
     id: "software-dev",
     title: "Software Developer",
     description: "Design and develop software applications and systems",
     averageSalary: "$105,000/year",
     growthRate: "25%",
-    requiredSkills: ["JavaScript", "Python", "Problem Solving", "System Design"],
+    requiredSkills: ["Programming", "Problem Solving", "Data Analysis", "Teamwork", "Technology", "JavaScript", "Python", "SQL", "Git", "Agile"],
     timeToAchieve: "2-4 years",
     steps: [
       "Learn programming fundamentals",
@@ -982,7 +980,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Create visual concepts to communicate ideas that inspire, inform, or captivate consumers",
     averageSalary: "$62,000/year",
     growthRate: "3%",
-    requiredSkills: ["Adobe Photoshop", "Illustrator", "Typography", "Branding"],
+    requiredSkills: ["UI Design", "Creativity", "Branding", "Communication", "Attention to Detail", "Adobe Photoshop", "Illustrator", "InDesign", "Typography", "Branding"],
     timeToAchieve: "1-3 years",
     steps: [
       "Learn design fundamentals",
@@ -999,7 +997,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Analyze complex data sets to help guide business decisions",
     averageSalary: "$120,000/year",
     growthRate: "30%",
-    requiredSkills: ["Python", "Statistics", "Machine Learning", "SQL"],
+    requiredSkills: ["Data Analysis", "Analytical Skills", "Research", "Statistics", "Problem Solving", "Python", "R", "SQL", "Machine Learning", "Tableau"],
     timeToAchieve: "3-5 years",
     steps: [
       "Master statistics and mathematics",
@@ -1016,7 +1014,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Protect organizations' systems and networks from cyber threats",
     averageSalary: "$95,000/year",
     growthRate: "33%",
-    requiredSkills: ["Penetration Testing", "Security Protocols", "Network Security", "Ethical Hacking"],
+    requiredSkills: ["Network Security", "Problem Solving", "Analytical Skills", "Attention to Detail", "Technology", "Penetration Testing", "Firewalls", "Encryption", "Linux", "Ethical Hacking"],
     timeToAchieve: "2-3 years",
     steps: [
       "Learn cybersecurity fundamentals",
@@ -1033,7 +1031,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Design and oversee cloud computing strategies",
     averageSalary: "$150,000/year",
     growthRate: "35%",
-    requiredSkills: ["AWS/Azure", "Network Security", "System Architecture", "DevOps"],
+    requiredSkills: ["Cloud Computing", "Network Security", "Project Management", "Strategic Planning", "Communication", "AWS", "Azure", "Google Cloud", "DevOps", "Networking"],
     timeToAchieve: "5-7 years",
     steps: [
       "Get cloud certifications",
@@ -1050,7 +1048,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Develop algorithms and models that enable machines to learn and make decisions",
     averageSalary: "$130,000/year",
     growthRate: "36%",
-    requiredSkills: ["Python", "TensorFlow", "Data Modeling", "Statistics"],
+    requiredSkills: ["Programming", "Data Analysis", "Research", "Problem Solving", "Analytical Skills", "Python", "TensorFlow", "Keras", "Data Modeling", "Statistics"],
     timeToAchieve: "4-6 years",
     steps: [
       "Learn programming and math fundamentals",
@@ -1067,7 +1065,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Bridge the gap between development and operations by automating software delivery",
     averageSalary: "$115,000/year",
     growthRate: "21%",
-    requiredSkills: ["Docker", "Kubernetes", "Jenkins", "Scripting"],
+    requiredSkills: ["Cloud Computing", "Project Management", "Problem Solving", "Teamwork", "Agile Methodologies", "Docker", "Kubernetes", "Jenkins", "Ansible", "Scripting"],
     timeToAchieve: "3-5 years",
     steps: [
       "Learn system administration",
@@ -1084,7 +1082,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Design and implement decentralized applications using blockchain technology",
     averageSalary: "$125,000/year",
     growthRate: "25%",
-    requiredSkills: ["Solidity", "Ethereum", "Cryptography", "JavaScript"],
+    requiredSkills: ["Programming", "Problem Solving", "Analytical Skills", "Communication", "Strategic Planning", "Solidity", "Ethereum", "Smart Contracts", "Cryptography", "JavaScript"],
     timeToAchieve: "3-5 years",
     steps: [
       "Learn programming basics",
@@ -1101,7 +1099,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Build and maintain the user-facing side of websites and applications",
     averageSalary: "$90,000/year",
     growthRate: "13%",
-    requiredSkills: ["HTML", "CSS", "JavaScript", "React"],
+    requiredSkills: ["Programming", "UI Design", "Teamwork", "Attention to Detail", "Communication", "HTML", "CSS", "JavaScript", "React", "UI Design"],
     timeToAchieve: "1-3 years",
     steps: [
       "Learn web development basics",
@@ -1118,7 +1116,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Oversee an organization's technology infrastructure and IT teams",
     averageSalary: "$120,000/year",
     growthRate: "11%",
-    requiredSkills: ["Project Management", "Network Security", "Leadership", "IT Strategy"],
+    requiredSkills: ["Project Management", "Leadership", "Communication", "Strategic Planning", "Technology", "Network Security", "Budgeting", "IT Strategy"],
     timeToAchieve: "5-7 years",
     steps: [
       "Gain IT experience",
@@ -1135,7 +1133,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Conduct research to advance artificial intelligence technologies",
     averageSalary: "$140,000/year",
     growthRate: "20%",
-    requiredSkills: ["Machine Learning", "Deep Learning", "Python", "Research"],
+    requiredSkills: ["Research", "Analytical Skills", "Problem Solving", "Data Analysis", "Communication", "Machine Learning", "Deep Learning", "Python", "Statistics"],
     timeToAchieve: "6-8 years",
     steps: [
       "Earn a degree in computer science",
@@ -1152,7 +1150,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Design and oversee the implementation of complex IT systems",
     averageSalary: "$130,000/year",
     growthRate: "10%",
-    requiredSkills: ["Systems Design", "Cloud Computing", "Networking", "Leadership"],
+    requiredSkills: ["Cloud Computing", "Leadership", "Problem Solving", "Strategic Planning", "Technology", "Systems Design", "Networking"],
     timeToAchieve: "5-7 years",
     steps: [
       "Gain IT experience",
@@ -1169,7 +1167,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Develop and maintain server-side applications and databases",
     averageSalary: "$100,000/year",
     growthRate: "15%",
-    requiredSkills: ["Node.js", "Java", "SQL", "API Development"],
+    requiredSkills: ["Programming", "Problem Solving", "Teamwork", "Data Analysis", "Communication", "Node.js", "Java", "SQL", "API Development", "Database Management"],
     timeToAchieve: "2-4 years",
     steps: [
       "Learn server-side programming",
@@ -1186,7 +1184,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Design and build robotic systems for automation and other applications",
     averageSalary: "$110,000/year",
     growthRate: "9%",
-    requiredSkills: ["ROS", "C++", "Mechanical Design", "Automation","Branding"],
+    requiredSkills: ["Technology", "Problem Solving", "Analytical Skills", "Communication", "Structural Analysis", "ROS", "C++", "Python", "Mechanical Design", "Automation"],
     timeToAchieve: "4-6 years",
     steps: [
       "Study engineering fundamentals",
@@ -1203,7 +1201,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Design user-friendly interfaces and experiences",
     averageSalary: "$95,000/year",
     growthRate: "20%",
-    requiredSkills: ["UI Design", "User Research", "Prototyping", "Wireframing"],
+    requiredSkills: ["UI Design", "Creativity", "Communication", "Attention to Detail", "Problem Solving", "Figma", "Sketch", "Wireframing", "Prototyping", "User Research"],
     timeToAchieve: "2-3 years",
     steps: [
       "Learn design principles",
@@ -1220,7 +1218,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Design and develop manufactured products like cars and appliances",
     averageSalary: "$70,000/year",
     growthRate: "2%",
-    requiredSkills: ["CAD", "3D Rendering", "Prototyping", "Material Science"],
+    requiredSkills: ["Creativity", "Problem Solving", "Communication", "Structural Analysis", "Branding", "CAD", "3D Rendering", "Prototyping", "Material Science", "Sketching"],
     timeToAchieve: "3-5 years",
     steps: [
       "Learn design basics",
@@ -1237,7 +1235,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Create animated graphics and visual effects for media",
     averageSalary: "$75,000/year",
     growthRate: "4%",
-    requiredSkills: ["After Effects", "Cinema 4D", "Animation", "Storyboarding"],
+    requiredSkills: ["Creativity", "Communication", "Attention to Detail", "UI Design", "Problem Solving", "After Effects", "Cinema 4D", "Animation", "Storyboarding", "Adobe Premiere"],
     timeToAchieve: "2-4 years",
     steps: [
       "Learn animation fundamentals",
@@ -1254,7 +1252,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Use art to help clients address emotional and psychological challenges",
     averageSalary: "$60,000/year",
     growthRate: "6%",
-    requiredSkills: ["Therapy Techniques", "Art Skills", "Counseling", "Empathy"],
+    requiredSkills: ["Patient Care", "Empathy", "Communication", "Teaching", "Problem Solving", "Therapy Techniques", "Art Skills", "Counseling"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn a degree in art or psychology",
@@ -1271,7 +1269,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Design and create visually appealing and functional websites",
     averageSalary: "$65,000/year",
     growthRate: "8%",
-    requiredSkills: ["HTML", "CSS", "JavaScript", "Adobe XD"],
+    requiredSkills: ["UI Design", "Creativity", "Teamwork", "Communication", "Attention to Detail", "HTML", "CSS", "JavaScript", "UI/UX Principles", "Adobe XD"],
     timeToAchieve: "1-3 years",
     steps: [
       "Learn web design basics",
@@ -1288,7 +1286,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Design, implement, and maintain computer networks",
     averageSalary: "$95,000/year",
     growthRate: "5%",
-    requiredSkills: ["Cisco", "TCP/IP", "Firewall Management", "Routing"],
+    requiredSkills: ["Technology", "Problem Solving", "Analytical Skills", "Communication", "Network Security", "Cisco Networking", "Firewall Management", "Troubleshooting", "Network Protocols", "Wireshark"],
     timeToAchieve: "3-5 years",
     steps: [
       "Learn networking basics",
@@ -1305,7 +1303,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Manage and maintain organizational databases",
     averageSalary: "$90,000/year",
     growthRate: "9%",
-    requiredSkills: ["SQL", "Oracle", "Backup/Recovery", "Performance Tuning"],
+    requiredSkills: ["Data Analysis", "Problem Solving", "Communication", "Technology", "Project Management", "SQL", "Database Design", "Backup and Recovery", "Performance Tuning", "Oracle"],
     timeToAchieve: "2-4 years",
     steps: [
       "Learn database management",
@@ -1322,7 +1320,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Design, analyze, and maintain mechanical systems",
     averageSalary: "$95,000/year",
     growthRate: "4%",
-    requiredSkills: ["AutoCAD", "SolidWorks", "Thermodynamics", "Manufacturing"],
+    requiredSkills: ["Structural Analysis", "Problem Solving", "Analytical Skills", "Teamwork", "Technology", "CAD Software", "Thermodynamics", "Prototyping", "SolidWorks", "Problem-Solving"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn a mechanical engineering degree",
@@ -1339,7 +1337,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Evaluate financial data to guide business decisions",
     averageSalary: "$85,000/year",
     growthRate: "7%",
-    requiredSkills: ["Excel", "Financial Modeling", "Data Analysis", "Forecasting"],
+    requiredSkills: ["Financial Modeling", "Analytical Skills", "Communication", "Research", "Problem Solving", "Excel", "Financial Modeling", "Bloomberg Terminal", "Data Analysis", "Forecasting"],
     timeToAchieve: "2-4 years",
     steps: [
       "Earn a finance degree",
@@ -1356,7 +1354,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Design, build, and maintain infrastructure projects like roads and bridges",
     averageSalary: "$90,000/year",
     growthRate: "6%",
-    requiredSkills: ["AutoCAD", "Structural Analysis", "Project Planning", "Construction Management"],
+    requiredSkills: ["Structural Analysis", "Project Management", "Problem Solving", "Communication", "Technology", "AutoCAD", "Surveying", "Math"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn a civil engineering degree",
@@ -1373,7 +1371,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Design and develop electrical systems and components",
     averageSalary: "$100,000/year",
     growthRate: "5%",
-    requiredSkills: ["AutoCAD Electrical", "PLC Programming", "Power Systems", "Electronics"],
+    requiredSkills: ["Technology", "Problem Solving", "Analytical Skills", "Teamwork", "Strategic Planning", "Circuit Design", "MATLAB", "PLC Programming", "Electrical Testing", "Project Management"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn an electrical engineering degree",
@@ -1384,15 +1382,13 @@ export const simulationPaths: SimulationPath[] = [
     trending: false,
     industry: "Engineering",
   },
-
-  // Next 25 careers (with industry added)
   {
     id: "environmental-engineer",
     title: "Environmental Engineer",
     description: "Develop solutions to environmental problems like pollution and waste management",
     averageSalary: "$95,000/year",
     growthRate: "8%",
-    requiredSkills: ["Water Treatment", "Air Quality", "GIS", "Environmental Modeling"],
+    requiredSkills: ["Environmental Conservation", "Analytical Skills", "Problem Solving", "Communication", "Research", "Environmental Impact Assessment", "Water Treatment", "GIS", "Sustainability Practices", "Data Analysis"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn an environmental engineering degree",
@@ -1409,7 +1405,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Design processes and equipment for large-scale chemical manufacturing",
     averageSalary: "$105,000/year",
     growthRate: "3%",
-    requiredSkills: ["Process Simulation", "Thermodynamics", "Chemical Reactions", "Safety Protocols"],
+    requiredSkills: ["Problem Solving", "Analytical Skills", "Communication", "Technology", "Strategic Planning", "Process Design", "Chemistry", "Safety Protocols", "Data Analysis", "Project Management"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn a chemical engineering degree",
@@ -1426,7 +1422,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Design and develop medical devices and equipment",
     averageSalary: "$100,000/year",
     growthRate: "10%",
-    requiredSkills: ["Biomechanics", "CAD", "Medical Imaging", "Regulatory Compliance"],
+    requiredSkills: ["Patient Care", "Problem Solving", "Analytical Skills", "Communication", "Technology", "Medical Device Design", "Biomechanics", "CAD Software", "Testing", "Collaboration"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn a biomedical engineering degree",
@@ -1443,7 +1439,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Design aircraft, spacecraft, satellites, and missiles",
     averageSalary: "$120,000/year",
     growthRate: "3%",
-    requiredSkills: ["Aerodynamics", "CAD", "Flight Simulation", "Propulsion"],
+    requiredSkills: ["Technology", "Problem Solving", "Analytical Skills", "Teamwork", "Structural Analysis", "Aerodynamics", "CAD Software", "Flight Testing", "Structural Analysis", "Math"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn an aerospace engineering degree",
@@ -1460,7 +1456,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Design and develop methods for extracting oil and gas",
     averageSalary: "$130,000/year",
     growthRate: "2%",
-    requiredSkills: ["Reservoir Simulation", "Drilling", "Geology", "Production Optimization"],
+    requiredSkills: ["Problem Solving", "Analytical Skills", "Communication", "Strategic Planning", "Environmental Conservation", "Reservoir Engineering", "Drilling Techniques", "Data Analysis", "Safety Protocols", "Project Management"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn a petroleum engineering degree",
@@ -1477,7 +1473,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Optimize complex processes, systems, or organizations",
     averageSalary: "$90,000/year",
     growthRate: "6%",
-    requiredSkills: ["Lean Manufacturing", "Six Sigma", "Process Optimization", "ERP Systems"],
+    requiredSkills: ["Project Management", "Problem Solving", "Analytical Skills", "Communication", "Agile Methodologies", "Lean Manufacturing", "Process Optimization", "Six Sigma", "ERP Systems", "Workflow Analysis"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn an industrial engineering degree",
@@ -1494,7 +1490,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Develop, process, and test materials used to create products",
     averageSalary: "$95,000/year",
     growthRate: "4%",
-    requiredSkills: ["Metallurgy", "Polymer Science", "Testing Methods", "Material Selection"],
+    requiredSkills: ["Analytical Skills", "Problem Solving", "Communication", "Technology", "Research", "Materials Testing", "Metallurgy", "Polymer Science", "Failure Analysis", "Quality Control"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn a materials engineering degree",
@@ -1511,7 +1507,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Apply engineering to solve problems in agriculture and food production",
     averageSalary: "$85,000/year",
     growthRate: "5%",
-    requiredSkills: ["Irrigation Design", "Soil Mechanics", "Machinery Design", "Water Management"],
+    requiredSkills: ["Technology", "Problem Solving", "Analytical Skills", "Communication", "Environmental Conservation", "Irrigation Systems", "Soil Mechanics", "Farm Equipment Design", "Sustainability Practices", "Data Analysis"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn an agricultural engineering degree",
@@ -1528,7 +1524,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Plan and execute marketing strategies to promote products or services",
     averageSalary: "$135,000/year",
     growthRate: "7%",
-    requiredSkills: ["Market Analysis", "Digital Marketing", "Campaign Management", "Branding"],
+    requiredSkills: ["Marketing Strategy", "Leadership", "Communication", "Strategic Planning", "Creativity", "Budgeting", "Market Research", "Digital Marketing", "Team Management"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn a marketing degree",
@@ -1545,7 +1541,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Lead sales teams and develop strategies to increase revenue",
     averageSalary: "$120,000/year",
     growthRate: "4%",
-    requiredSkills: ["Sales Strategy", "CRM Software", "Negotiation", "Team Management"],
+    requiredSkills: ["Leadership", "Communication", "Negotiation", "Strategic Planning", "Teamwork", "Sales Forecasting", "CRM Software", "Team Leadership", "Customer Relationship Management"],
     timeToAchieve: "4-6 years",
     steps: [
       "Gain sales experience",
@@ -1562,7 +1558,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Create and manage advertising campaigns to promote brands",
     averageSalary: "$75,000/year",
     growthRate: "6%",
-    requiredSkills: ["Ad Copywriting", "Media Buying", "Graphic Design", "Digital Ads"],
+    requiredSkills: ["Creativity", "Communication", "Branding", "Problem Solving", "Attention to Detail", "Advertising Strategy", "Media Planning", "Copywriting", "Graphic Design", "Campaign Analysis"],
     timeToAchieve: "2-4 years",
     steps: [
       "Learn advertising basics",
@@ -1579,7 +1575,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Manage public image and communication for organizations",
     averageSalary: "$65,000/year",
     growthRate: "7%",
-    requiredSkills: ["Press Releases", "Media Outreach", "Crisis Management", "Content Creation"],
+    requiredSkills: ["Communication", "Problem Solving", "Attention to Detail", "Teamwork", "Marketing Strategy", "Media Relations", "Crisis Management", "Press Release Writing", "Event Planning"],
     timeToAchieve: "2-4 years",
     steps: [
       "Earn a communications degree",
@@ -1596,7 +1592,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Gather and analyze data to understand market trends and consumer behavior",
     averageSalary: "$70,000/year",
     growthRate: "18%",
-    requiredSkills: ["Statistics", "SurveyMonkey", "Data Visualization", "Consumer Behavior"],
+    requiredSkills: ["Analytical Skills", "Research", "Communication", "Data Analysis", "Problem Solving", "Survey Design", "Statistics", "Market Research", "Reporting"],
     timeToAchieve: "2-4 years",
     steps: [
       "Earn a marketing or stats degree",
@@ -1613,7 +1609,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Develop and manage content strategies to engage audiences",
     averageSalary: "$80,000/year",
     growthRate: "9%",
-    requiredSkills: ["Content Creation", "SEO", "Content Management", "Analytics"],
+    requiredSkills: ["Creativity", "Communication", "Problem Solving", "Strategic Planning", "Marketing Strategy", "Content Creation", "SEO", "Content Management", "Analytics"],
     timeToAchieve: "2-4 years",
     steps: [
       "Learn writing and marketing",
@@ -1630,7 +1626,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Optimize websites to improve search engine rankings",
     averageSalary: "$70,000/year",
     growthRate: "10%",
-    requiredSkills: ["Google Analytics", "Keyword Research", "On-page SEO", "Technical SEO"],
+    requiredSkills: ["Problem Solving", "Analytical Skills", "Communication", "Attention to Detail", "Technology", "Keyword Research", "On-Page SEO", "Link Building", "Google Analytics", "Technical SEO"],
     timeToAchieve: "1-3 years",
     steps: [
       "Learn SEO fundamentals",
@@ -1647,7 +1643,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Manage an organization’s social media presence and campaigns",
     averageSalary: "$65,000/year",
     growthRate: "8%",
-    requiredSkills: ["Facebook Ads", "Instagram Strategy", "Content Scheduling", "Analytics"],
+    requiredSkills: ["Communication", "Creativity", "Teamwork", "Problem Solving", "Marketing Strategy", "Social Media Advertising", "Content Scheduling", "Analytics", "Community Management"],
     timeToAchieve: "1-3 years",
     steps: [
       "Learn social media marketing",
@@ -1664,7 +1660,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Study and protect the environment and its resources",
     averageSalary: "$75,000/year",
     growthRate: "8%",
-    requiredSkills: ["Environmental Sampling", "GIS", "Data Analysis", "Ecology"],
+    requiredSkills: ["Environmental Conservation", "Analytical Skills", "Research", "Communication", "Problem Solving", "Data Collection", "Environmental Monitoring", "GIS", "Reporting"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn an environmental science degree",
@@ -1681,7 +1677,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Study the Earth's physical structure and history",
     averageSalary: "$85,000/year",
     growthRate: "7%",
-    requiredSkills: ["Geographic Mapping", "Seismology", "Rock Identification", "GIS"],
+    requiredSkills: ["Analytical Skills", "Research", "Communication", "Environmental Conservation", "Problem Solving", "Geological Mapping", "Fieldwork", "Mineral Identification", "Data Analysis", "GIS"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn a geology degree",
@@ -1698,7 +1694,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Study the distribution, circulation, and properties of water",
     averageSalary: "$80,000/year",
     growthRate: "6%",
-    requiredSkills: ["Hydrologic Modeling", "Water Quality", "GIS", "Field Sampling"],
+    requiredSkills: ["Analytical Skills", "Research", "Communication", "Environmental Conservation", "Problem Solving", "Water Quality Analysis", "Hydrologic Modeling", "Field Sampling", "Data Interpretation", "GIS"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn a hydrology degree",
@@ -1715,7 +1711,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Manage and protect natural resources like forests and wildlife",
     averageSalary: "$70,000/year",
     growthRate: "6%",
-    requiredSkills: ["Ecology", "Wildlife Management", "GIS", "Conservation Planning"],
+    requiredSkills: ["Environmental Conservation", "Analytical Skills", "Research", "Communication", "Problem Solving", "Resource Management", "Ecosystem Restoration", "Wildlife Monitoring", "GIS", "Policy Development"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn a conservation degree",
@@ -1732,7 +1728,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Study weather patterns and atmospheric phenomena",
     averageSalary: "$95,000/year",
     growthRate: "7%",
-    requiredSkills: ["Weather Forecasting", "Climate Modeling", "Radar Systems", "Programming"],
+    requiredSkills: ["Analytical Skills", "Research", "Communication", "Technology", "Problem Solving", "Weather Forecasting", "Climate Modeling", "Data Analysis", "Radar Technology", "Programming"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn a meteorology degree",
@@ -1749,7 +1745,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Study the ocean's physical and biological aspects",
     averageSalary: "$85,000/year",
     growthRate: "6%",
-    requiredSkills: ["Marine Biology", "Ocean Modeling", "Remote Sensing", "Data Collection"],
+    requiredSkills: ["Research", "Analytical Skills", "Communication", "Environmental Conservation", "Problem Solving", "Marine Biology", "Ocean Current Analysis", "Field Research", "Data Collection", "Remote Sensing"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn an oceanography degree",
@@ -1766,7 +1762,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Study interactions among organisms and their environments",
     averageSalary: "$70,000/year",
     growthRate: "7%",
-    requiredSkills: ["Ecosystem Analysis", "Field Sampling", "GIS", "Statistics"],
+    requiredSkills: ["Environmental Conservation", "Research", "Analytical Skills", "Communication", "Problem Solving", "Ecosystem Analysis", "Fieldwork", "Data Analysis", "Conservation Techniques", "Statistical Modeling"],
     timeToAchieve: "4-6 years",
     steps: [
       "Earn an ecology degree",
@@ -1777,15 +1773,13 @@ export const simulationPaths: SimulationPath[] = [
     trending: false,
     industry: "Science",
   },
-
-  // Remaining 13 careers (with industry added)
   {
     id: "illustrator",
     title: "Illustrator",
     description: "Create visual artwork for books, magazines, and digital media",
     averageSalary: "$50,000/year",
     growthRate: "3%",
-    requiredSkills: ["Adobe Illustrator", "Sketching", "Digital Painting", "Concept Art"],
+    requiredSkills: ["Creativity", "Communication", "UI Design", "Attention to Detail", "Branding", "Drawing", "Digital Illustration", "Adobe Illustrator", "Storytelling", "Color Theory"],
     timeToAchieve: "1-3 years",
     steps: [
       "Learn drawing and design basics",
@@ -1802,7 +1796,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Create animations for films, games, and online content",
     averageSalary: "$75,000/year",
     growthRate: "4%",
-    requiredSkills: ["Maya", "Blender", "After Effects", "Rigging"],
+    requiredSkills: ["Creativity", "Problem Solving", "Communication", "Attention to Detail", "UI Design", "3D Animation", "Maya", "Blender", "Storyboarding", "Rigging"],
     timeToAchieve: "2-4 years",
     steps: [
       "Learn animation fundamentals",
@@ -1819,7 +1813,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Edit raw video footage into polished final products",
     averageSalary: "$60,000/year",
     growthRate: "11%",
-    requiredSkills: ["Adobe Premiere", "Final Cut Pro", "Color Grading", "Audio Editing"],
+    requiredSkills: ["Creativity", "Communication", "Problem Solving", "Attention to Detail", "Technology", "Adobe Premiere", "Final Cut Pro", "Color Grading", "Motion Graphics", "Audio Editing"],
     timeToAchieve: "1-3 years",
     steps: [
       "Learn video editing basics",
@@ -1836,7 +1830,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Create visual effects for films, TV, and video games",
     averageSalary: "$90,000/year",
     growthRate: "12%",
-    requiredSkills: ["Houdini", "Nuke", "3D Modeling", "Compositing"],
+    requiredSkills: ["Creativity", "Problem Solving", "Communication", "Attention to Detail", "Technology", "Houdini", "Nuke", "After Effects", "Compositing", "3D Modeling"],
     timeToAchieve: "3-5 years",
     steps: [
       "Learn VFX fundamentals",
@@ -1853,7 +1847,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Perform, compose, or produce music for live or recorded media",
     averageSalary: "$50,000/year",
     growthRate: "3%",
-    requiredSkills: ["Music Theory", "Instrument Performance", "Recording", "Composition"],
+    requiredSkills: ["Creativity", "Communication", "Problem Solving", "Teamwork", "Teaching", "Music Theory", "Instrument Performance", "Audio Production", "Songwriting", "Recording Techniques"],
     timeToAchieve: "2-5 years",
     steps: [
       "Train in an instrument or vocals",
@@ -1870,7 +1864,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Perform in films, TV, theater, or other media",
     averageSalary: "$60,000/year",
     growthRate: "2%",
-    requiredSkills: ["Improvisation", "Script Analysis", "Voice Acting", "Stagecraft"],
+    requiredSkills: ["Communication", "Creativity", "Problem Solving", "Teamwork", "Empathy", "Acting Techniques", "Improvisation", "Voice Training", "Script Analysis", "Stage Presence"],
     timeToAchieve: "2-5 years",
     steps: [
       "Take acting classes",
@@ -1887,7 +1881,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Create written content for books, scripts, articles, or online media",
     averageSalary: "$60,000/year",
     growthRate: "5%",
-    requiredSkills: ["Creative Writing", "Grammar", "Research", "SEO Writing"],
+    requiredSkills: ["Creative Writing", "Communication", "Research", "Problem Solving", "Attention to Detail", "Grammar", "SEO Writing", "Storytelling", "Editing"],
     timeToAchieve: "1-3 years",
     steps: [
       "Develop writing skills",
@@ -1904,7 +1898,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Capture images for artistic, commercial, or journalistic purposes",
     averageSalary: "$40,000/year",
     growthRate: "3%",
-    requiredSkills: ["Photography", "Adobe Lightroom", "Portraiture", "Lighting"],
+    requiredSkills: ["Creativity", "Communication", "Attention to Detail", "Technology", "Branding", "Photography", "Adobe Lightroom", "Portraiture", "Lighting", "Photo Editing"],
     timeToAchieve: "1-3 years",
     steps: [
       "Learn photography basics",
@@ -1921,7 +1915,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Plan and design interior spaces for homes, offices, and commercial buildings",
     averageSalary: "$60,000/year",
     growthRate: "4%",
-    requiredSkills: ["AutoCAD", "3D Visualization", "Space Planning", "Client Communication"],
+    requiredSkills: ["Creativity", "Communication", "Structural Analysis", "Project Management", "UI Design", "AutoCAD", "3D Visualization", "Space Planning", "Client Communication"],
     timeToAchieve: "2-4 years",
     steps: [
       "Earn an interior design degree",
@@ -1938,7 +1932,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Create clothing and accessory designs for production and retail",
     averageSalary: "$65,000/year",
     growthRate: "0%",
-    requiredSkills: ["Sketching", "Pattern Making", "Textile Knowledge", "Sewing"],
+    requiredSkills: ["Creativity", "Communication", "Branding", "Problem Solving", "Attention to Detail", "Sketching", "Pattern Making", "Textile Knowledge", "Sewing", "Trend Analysis"],
     timeToAchieve: "2-4 years",
     steps: [
       "Learn fashion design basics",
@@ -1955,7 +1949,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Provide patient care and support in healthcare settings",
     averageSalary: "$75,000/year",
     growthRate: "12%",
-    requiredSkills: ["Patient Care", "Medical Procedures", "Communication", "Vital Signs"],
+    requiredSkills: ["Patient Care", "Communication", "Problem Solving", "Empathy", "Technology", "Medical Procedures", "Vital Signs", "Patient Assessment", "Infection Control"],
     timeToAchieve: "2-4 years",
     steps: [
       "Earn a nursing degree",
@@ -1972,7 +1966,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Diagnose and treat illnesses and injuries in patients",
     averageSalary: "$200,000/year",
     growthRate: "4%",
-    requiredSkills: ["Diagnosis", "Surgery", "Patient Management", "Medical Knowledge"],
+    requiredSkills: ["Patient Care", "Analytical Skills", "Communication", "Problem Solving", "Strategic Planning", "Diagnosis", "Surgery", "Patient Management", "Medical Knowledge"],
     timeToAchieve: "7-11 years",
     steps: [
       "Earn a bachelor’s degree",
@@ -1989,7 +1983,7 @@ export const simulationPaths: SimulationPath[] = [
     description: "Dispense medications and provide drug information to patients",
     averageSalary: "$125,000/year",
     growthRate: "3%",
-    requiredSkills: ["Medication Dispensing", "Drug Interactions", "Counseling", "Regulatory Compliance"],
+    requiredSkills: ["Patient Care", "Analytical Skills", "Communication", "Attention to Detail", "Technology", "Medication Dispensing", "Drug Interactions", "Counseling", "Regulatory Compliance"],
     timeToAchieve: "6-8 years",
     steps: [
       "Earn a PharmD degree",
@@ -1999,7 +1993,7 @@ export const simulationPaths: SimulationPath[] = [
     ],
     trending: false,
     industry: "Healthcare",
-  },
+  }
   
 ];
 
